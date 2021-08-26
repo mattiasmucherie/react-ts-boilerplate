@@ -9,7 +9,8 @@
     "analyze": "webpack --analyze --config webpack.prod.js",
     "test": "jest --coverage --config=jest.config.js",
     "lint": "eslint .",
-    "pretty": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|yml|yaml|css|md|vue)\""
+    "pretty": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|yml|yaml|css|md|vue)\"",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -43,6 +44,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
+    "husky": "^7.0.0",
     "jest": "^27.0.6",
     "prettier": "^2.3.2",
     "style-loader": "^3.2.1",
