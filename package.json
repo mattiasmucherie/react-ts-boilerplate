@@ -1,14 +1,13 @@
 {
   "name": "react-ts-boilerplate",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Boilerplate for React, Webpack, Typescript and Babel project.",
   "scripts": {
-    "start": "webpack serve --open --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js",
-    "analyze": "webpack --analyze --config webpack.prod.js",
-    "test": "jest --coverage --config=jest.config.js",
-    "lint": "eslint .",
+    "start": "webpack serve --open --config configs/webpack.dev.js",
+    "build": "webpack --config configs/webpack.prod.js",
+    "analyze": "webpack --analyze --config configs/webpack.prod.js",
+    "test": "jest --coverage --config=configs/jest.config.js",
+    "lint": "eslint './src/**/*.{js,ts,tsx}' --quiet",
     "pretty": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|yml|yaml|css|md|vue)\"",
     "prepare": "husky install"
   },

@@ -1,5 +1,6 @@
 module.exports = {
+  rootDir: '..',
   testEnvironment: 'jsdom',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  setupFilesAfterEnv: ['<rootDir>/setuptests.ts'],
+  setupFilesAfterEnv: ['<rootDir>/configs/setuptests.ts'],
 }
