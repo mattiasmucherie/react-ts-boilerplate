@@ -3,20 +3,22 @@
   "version": "1.0.0",
   "description": "Boilerplate for React, Webpack, Typescript and Babel project.",
   "scripts": {
-    "start": "webpack serve --open --config configs/webpack.dev.js",
-    "build": "webpack --config configs/webpack.prod.js",
     "analyze": "webpack --analyze --config configs/webpack.prod.js",
-    "test": "jest --coverage --config=configs/jest.config.js",
+    "build": "webpack --config configs/webpack.prod.js",
+    "checkTs": "tsc --noEmit",
     "lint": "eslint './src/**/*.{js,ts,tsx}' --quiet",
     "pretty": "prettier --write \"**/*.+(js|jsx|ts|tsx|json|yml|yaml|css|md|vue)\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "start": "webpack serve --open --config configs/webpack.dev.js",
+    "test": "jest --coverage --config=configs/jest.config.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.1"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
@@ -28,10 +30,12 @@
     "@types/jest": "^27.0.1",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
+    "@types/styled-components": "^5.1.13",
     "@typescript-eslint/eslint-plugin": "^4.29.3",
     "@typescript-eslint/parser": "^4.29.3",
     "babel-jest": "^27.0.6",
     "babel-loader": "^8.2.2",
+    "babel-plugin-styled-components": "^1.13.2",
     "css-loader": "^6.2.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",

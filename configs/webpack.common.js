@@ -10,16 +10,17 @@ module.exports = () => {
     plugins.push(new BundleAnalyzerPlugin())
   }
   return {
-    entry: './src/index.tsx',
+    entry: './index.tsx',
     output: {
       filename: 'js/bundle.[contenthash].min.js',
-      path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, '../dist'),
       publicPath: '/',
       clean: true,
     },
     resolve: {
-      extensions: ['.tsx', '.ts', '.js'],
+      extensions: ['.tsx', '.ts', '.js', '.jsx'],
     },
+    context: path.resolve(__dirname, '../src'),
     module: {
       rules: [
         {
@@ -33,7 +34,7 @@ module.exports = () => {
           use: ['ts-loader'],
         },
         {
-          test: /\.(css|scss)$/,
+          test: /\.(css)$/,
           use: ['style-loader', 'css-loader'],
         },
         {
@@ -45,7 +46,7 @@ module.exports = () => {
     plugins: [
       ...plugins,
       new HtmlWebpackPlugin({
-        template: path.join(__dirname, 'src', 'index.html'),
+        template: 'index.html',
       }),
       new webpack.HotModuleReplacementPlugin(),
     ],

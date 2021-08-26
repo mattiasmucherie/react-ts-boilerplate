@@ -1,4 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-rm -rf coverage && rm -rf dist && npm run pretty && npm run lint && npm test
+rm -rf coverage && rm -rf dist && npm run pretty && npm run lint && npm run checkTs && npm test
